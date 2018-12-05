@@ -40,8 +40,12 @@ namespace Meat
                 app.UseHsts();
             }
 
+            app.UseStaticFiles();
             app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute("Default", "{*path}", new { controller= "Home", action="Index" });
+            });
         }
     }
 }

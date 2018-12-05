@@ -5,12 +5,34 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Front\**" />
+    <Compile Remove="Pages\**" />
+    <Content Remove="Front\**" />
+    <Content Remove="Pages\**" />
+    <EmbeddedResource Remove="Front\**" />
+    <EmbeddedResource Remove="Pages\**" />
+    <None Remove="Front\**" />
+    <None Remove="Pages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Model\DbRecord.hbm.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Model\DbRecord.hbm.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="MySql.Data" Version="8.0.13" />
+    <PackageReference Include="NHibernate" Version="5.2.0" />
   </ItemGroup>
 
 </Project>
