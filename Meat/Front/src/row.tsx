@@ -21,8 +21,8 @@ export class Row extends React.Component<RowProps, RowState>
         const f: number = 70;
         return (
             <div style={{ display: 'flex', flexDirection: "row", borderRadius: 5, margin: 3, padding: 3, backgroundColor: "MediumPurple", color: "white" }}>
-                <div>{this.props.record.time}</div>
-                <div style={{ flexGrow: 1, marginLeft: 3 }}>{this.props.record.text}</div>
+                <div style={{ border: "solid", borderColor: "black", borderWidth: 2, padding: 2 }}>{this.props.record.time}</div>
+                <div style={{ flexGrow: 1, marginLeft: 3, display: "flex", justifyContent: "center", flexDirection: "column" }}>{this.props.record.text}</div>
                 <svg onClick={e => this.props.remove(this.props.record.id)} viewBox="0 0 100 100" width="20" height="20">
                     <circle cx="50" cy="50" r="50" style={{ fill: "FireBrick" }}/>
                     <line x1={n} y1={n} x2={f} y2={f} style={{stroke: "white", strokeWidth: 10}} />
